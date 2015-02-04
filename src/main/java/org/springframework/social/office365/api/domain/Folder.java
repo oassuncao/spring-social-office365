@@ -12,12 +12,15 @@ import java.util.List;
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Folder extends FileSystemItem {
+// ------------------------------ FIELDS ------------------------------
 
     @JsonProperty("Children")
     List<FileSystemItem> children = new ArrayList<FileSystemItem>();
 
     @JsonProperty("ChildrenCount")
     private Long childrenCount;
+
+// --------------------- GETTER / SETTER METHODS ---------------------
 
     public List<FileSystemItem> getChildren() {
         return children;

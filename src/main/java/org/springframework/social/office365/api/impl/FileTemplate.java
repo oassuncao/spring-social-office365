@@ -11,6 +11,7 @@ import java.net.URI;
  * Date: 24/07/2014
  */
 public class FileTemplate extends AbstractTemplate implements FileOperations {
+// ------------------------------ FIELDS ------------------------------
 
     private final RestTemplate restTemplate;
 
@@ -18,12 +19,19 @@ public class FileTemplate extends AbstractTemplate implements FileOperations {
 
     private String url;
 
+// --------------------------- CONSTRUCTORS ---------------------------
+
     public FileTemplate(RestTemplate restTemplate, boolean authorized, String baseUrl) {
         this.restTemplate = restTemplate;
         this.isAuthorized = authorized;
 
         this.url = baseUrl + "/_api/files";
     }
+
+// ------------------------ INTERFACE METHODS ------------------------
+
+
+// --------------------- Interface FileOperations ---------------------
 
     @Override
     public File getFile(String filePath) {

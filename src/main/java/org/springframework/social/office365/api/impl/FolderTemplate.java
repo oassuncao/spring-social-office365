@@ -13,6 +13,7 @@ import java.util.List;
  * Date: 24/07/2014
  */
 public class FolderTemplate extends AbstractTemplate implements FolderOperations {
+// ------------------------------ FIELDS ------------------------------
 
     private final RestTemplate restTemplate;
 
@@ -20,12 +21,19 @@ public class FolderTemplate extends AbstractTemplate implements FolderOperations
 
     private String url;
 
+// --------------------------- CONSTRUCTORS ---------------------------
+
     public FolderTemplate(RestTemplate restTemplate, boolean authorized, String baseUrl) {
         this.restTemplate = restTemplate;
         this.isAuthorized = authorized;
 
         this.url = baseUrl + "/_api/files";
     }
+
+// ------------------------ INTERFACE METHODS ------------------------
+
+
+// --------------------- Interface FolderOperations ---------------------
 
     @Override
     public Folder getFolder(String folderPath) {
@@ -38,7 +46,7 @@ public class FolderTemplate extends AbstractTemplate implements FolderOperations
     public Folder getRootFolder() {
         checkAuthorization(isAuthorized);
 
-        return restTemplate.getForObject(URI.create(url + "/0" ), Folder.class);
+        return restTemplate.getForObject(URI.create(url + "/0"), Folder.class);
     }
 
     @Override

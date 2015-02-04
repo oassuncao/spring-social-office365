@@ -7,6 +7,7 @@ import org.springframework.social.office365.api.domain.File;
  * Date: 24/07/2014
  */
 public interface FileOperations {
+// -------------------------- OTHER METHODS --------------------------
 
     File getFile(String filePath);
 

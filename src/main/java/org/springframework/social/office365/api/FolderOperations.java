@@ -10,12 +10,13 @@ import java.util.List;
  * Date: 24/07/2014
  */
 public interface FolderOperations {
+// -------------------------- OTHER METHODS --------------------------
 
     Folder getFolder(String folderPath);
 
-    Folder getRootFolder();
-
     List<FileSystemItem> getFolderItems(String folderPath);
+
+    Folder getRootFolder();
 
     List<FileSystemItem> getRootFolderItems();
 }

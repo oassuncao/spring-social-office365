@@ -7,6 +7,7 @@ import org.springframework.social.office365.api.domain.User;
  * Date: 24/07/2014
  */
 public interface UserOperations {
+// -------------------------- OTHER METHODS --------------------------
 
     User getUserProfile();
 }

@@ -13,6 +13,11 @@ import org.springframework.social.office365.api.domain.User;
  * Date: 24/07/2014
  */
 public class Office365Adapter implements ApiAdapter<Office365> {
+// ------------------------ INTERFACE METHODS ------------------------
+
+
+// --------------------- Interface ApiAdapter ---------------------
+
     @Override
     public boolean test(Office365 api) {
         try {

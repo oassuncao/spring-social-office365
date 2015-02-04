@@ -7,12 +7,15 @@ import org.springframework.social.ApiBinding;
  * Date: 24/07/2014
  */
 public interface Office365 extends ApiBinding {
+// ------------------------------ FIELDS ------------------------------
+
     public static final String PROVIDER_NAME = "office365";
 
-    UserOperations userOperations();
+// -------------------------- OTHER METHODS --------------------------
 
     FileOperations fileOperations();
 
     FolderOperations folderOperations();
 
+    UserOperations userOperations();
 }

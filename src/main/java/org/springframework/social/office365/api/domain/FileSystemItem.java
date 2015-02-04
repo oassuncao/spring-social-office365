@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class FileSystemItem {
+// ------------------------------ FIELDS ------------------------------
 
     @JsonProperty("Id")
     private String id;
@@ -37,45 +38,7 @@ public abstract class FileSystemItem {
     @JsonProperty("Size")
     private Long size;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String geteTag() {
-        return eTag;
-    }
-
-    public void seteTag(String eTag) {
-        this.eTag = eTag;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getTimeLastModified() {
-        return timeLastModified;
-    }
-
-    public void setTimeLastModified(String timeLastModified) {
-        this.timeLastModified = timeLastModified;
-    }
+// --------------------- GETTER / SETTER METHODS ---------------------
 
     public User getCreatedBy() {
         return createdBy;
@@ -85,12 +48,12 @@ public abstract class FileSystemItem {
         this.createdBy = createdBy;
     }
 
-    public String getTimeCreated() {
-        return timeCreated;
+    public String getId() {
+        return id;
     }
 
-    public void setTimeCreated(String timeCreated) {
-        this.timeCreated = timeCreated;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getLastModifiedBy() {
@@ -101,11 +64,53 @@ public abstract class FileSystemItem {
         this.lastModifiedBy = lastModifiedBy;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Long getSize() {
         return size;
     }
 
     public void setSize(Long size) {
         this.size = size;
+    }
+
+    public String getTimeCreated() {
+        return timeCreated;
+    }
+
+    public void setTimeCreated(String timeCreated) {
+        this.timeCreated = timeCreated;
+    }
+
+    public String getTimeLastModified() {
+        return timeLastModified;
+    }
+
+    public void setTimeLastModified(String timeLastModified) {
+        this.timeLastModified = timeLastModified;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+// -------------------------- OTHER METHODS --------------------------
+
+    public String geteTag() {
+        return eTag;
+    }
+
+    public void seteTag(String eTag) {
+        this.eTag = eTag;
     }
 }

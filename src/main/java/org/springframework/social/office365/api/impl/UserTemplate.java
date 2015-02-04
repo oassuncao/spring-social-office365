@@ -11,6 +11,7 @@ import java.net.URI;
  * Date: 24/07/2014
  */
 public class UserTemplate extends AbstractTemplate implements UserOperations {
+// ------------------------------ FIELDS ------------------------------
 
     private final RestTemplate restTemplate;
 
@@ -18,12 +19,19 @@ public class UserTemplate extends AbstractTemplate implements UserOperations {
 
     private String url;
 
-    public UserTemplate(RestTemplate restTemplate, boolean isAuthorized, String baseUrl){
+// --------------------------- CONSTRUCTORS ---------------------------
+
+    public UserTemplate(RestTemplate restTemplate, boolean isAuthorized, String baseUrl) {
         this.restTemplate = restTemplate;
         this.isAuthorized = isAuthorized;
 
         this.url = baseUrl;
     }
+
+// ------------------------ INTERFACE METHODS ------------------------
+
+
+// --------------------- Interface UserOperations ---------------------
 
     @Override
     public User getUserProfile() {
